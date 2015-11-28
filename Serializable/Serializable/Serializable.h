@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Serializable : NSObject<NSCoding>
+@interface Serializable : NSObject<NSCoding, NSCopying, NSMutableCopying>
 
 - (instancetype) init;
 

@@ -23,6 +23,27 @@
     return self;
 }
 
+#pragma mark - NSCoping
+
+- (instancetype) copyWithZone: (NSZone*)zone
+{
+    Serializable* newObject = [[[self class] allocWithZone: zone] init];
+    
+    NSArray* propertiesNames = [self propertiesNames];
+    
+    for (NSString* propertyName in propertiesNames)
+    {
+        [newObject setValue: [[self valueForKey: propertyName] copy] forKey: propertyName];
+    }
+    
+    return newObject;
+}
+
+- (instancetype) mutableCopyWithZone: (NSZone*)zone
+{
+    return [self copyWithZone: zone];
+}
+
 #pragma mark - NSCoding
 
 - (instancetype) initWithCoder: (NSCoder*)decoder

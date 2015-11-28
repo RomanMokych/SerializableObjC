@@ -43,4 +43,32 @@
     XCTAssertEqual(5, b.aInt);
 }
 
+- (void)test_Copying
+{
+    SerializableA* a = [[SerializableA alloc] init];
+    a.aString = @"test";
+    a.aBool = YES;
+    a.aInt = 5;
+    
+    SerializableA* b = [a copy];
+    
+    XCTAssertEqualObjects(@"test", b.aString);
+    XCTAssertEqual(YES, b.aBool);
+    XCTAssertEqual(5, b.aInt);
+}
+
+- (void)test_MutableCopying
+{
+    SerializableA* a = [[SerializableA alloc] init];
+    a.aString = @"test";
+    a.aBool = YES;
+    a.aInt = 5;
+    
+    SerializableA* b = [a mutableCopy];
+    
+    XCTAssertEqualObjects(@"test", b.aString);
+    XCTAssertEqual(YES, b.aBool);
+    XCTAssertEqual(5, b.aInt);
+}
+
 @end
