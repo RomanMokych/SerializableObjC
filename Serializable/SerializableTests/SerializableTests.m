@@ -116,4 +116,22 @@
     XCTAssertFalse([a isEqual: b]);
 }
 
+- (void)test_ArchivingWithIgnoredProperties
+{
+    SerializableA* a = [[SerializableA alloc] init];
+    a.aString = @"test";
+    a.aBool = YES;
+    a.aInt = 5;
+    
+    a.ignoredProperties = @[@"aInt"];
+    
+    NSData* aData = [NSKeyedArchiver archivedDataWithRootObject: a];
+    
+    SerializableA* b = [NSKeyedUnarchiver unarchiveObjectWithData: aData];
+    
+    XCTAssertEqualObjects(@"test", b.aString);
+    XCTAssertEqual(YES, b.aBool);
+    XCTAssertEqual(0, b.aInt); //was ignored while saving
+}
+
 @end

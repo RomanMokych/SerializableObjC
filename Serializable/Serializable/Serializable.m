@@ -30,7 +30,7 @@
         return NO;
     }
     
-    NSArray* propertiesNames = [self propertiesNames];
+    NSArray* propertiesNames = [self filteredPropertiesNames];
     
     for (NSString* propertyName in propertiesNames)
     {
@@ -57,11 +57,15 @@
 {
     Serializable* newObject = [[[self class] allocWithZone: zone] init];
     
-    NSArray* propertiesNames = [self propertiesNames];
+    NSArray* propertiesNames = [self filteredPropertiesNames];
     
     for (NSString* propertyName in propertiesNames)
     {
-        [newObject setValue: [[self valueForKey: propertyName] copy] forKey: propertyName];
+        id propertyValue = [self valueForKey: propertyName];
+        if (propertyValue)
+        {
+            [newObject setValue: [propertyValue copy] forKey: propertyName];
+        }
     }
     
     return newObject;
@@ -79,12 +83,15 @@
     self = [super init];
     if (self)
     {
-        NSArray* propertiesNames = [self propertiesNames];
+        NSArray* propertiesNames = [self filteredPropertiesNames];
         
         for (NSString* propertyName in propertiesNames)
         {
             id propertyValue = [decoder decodeObjectForKey: propertyName];
-            [self setValue: propertyValue forKey: propertyName];
+            if (propertyValue)
+            {
+                [self setValue: propertyValue forKey: propertyName];
+            }
         }
     }
     
@@ -93,7 +100,7 @@
 
 - (void) encodeWithCoder: (NSCoder*)coder
 {
-    NSArray* propertiesNames = [self propertiesNames];
+    NSArray* propertiesNames = [self filteredPropertiesNames];
     
     for (NSString* propertyName in propertiesNames)
     {
@@ -122,6 +129,21 @@
     free(properties);
     
     return propertiesNSArray;
+}
+
+- (NSArray*) filteredPropertiesNames
+{
+    NSArray* propertiesNames = [self propertiesNames];
+    NSMutableArray* filteredPropertiesNames = [NSMutableArray array];
+    for (NSString* propertyName in propertiesNames)
+    {
+        if (![_ignoredProperties containsObject: propertyName])
+        {
+            [filteredPropertiesNames addObject: propertyName];
+        }
+    }
+    
+    return filteredPropertiesNames;
 }
 
 @end
