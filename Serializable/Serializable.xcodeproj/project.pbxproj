@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30682E0C1C0A474C00CC3CA5 /* Serializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 30682E0B1C0A474C00CC3CA5 /* Serializable.h */; };
+		30682E0E1C0A474C00CC3CA5 /* Serializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 30682E0D1C0A474C00CC3CA5 /* Serializable.m */; };
+		30682E1B1C0A479E00CC3CA5 /* SerializableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30682E1A1C0A479E00CC3CA5 /* SerializableTests.m */; };
+		30682E1D1C0A479E00CC3CA5 /* libSerializable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30682E081C0A474C00CC3CA5 /* libSerializable.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30682E1E1C0A479E00CC3CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30682E001C0A474C00CC3CA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30682E071C0A474C00CC3CA5;
+			remoteInfo = Serializable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30682E081C0A474C00CC3CA5 /* libSerializable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSerializable.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		30682E0B1C0A474C00CC3CA5 /* Serializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serializable.h; sourceTree = "<group>"; };
+		30682E0D1C0A474C00CC3CA5 /* Serializable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Serializable.m; sourceTree = "<group>"; };
+		30682E181C0A479E00CC3CA5 /* SerializableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerializableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30682E1A1C0A479E00CC3CA5 /* SerializableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SerializableTests.m; sourceTree = "<group>"; };
+		30682E1C1C0A479E00CC3CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30682E051C0A474C00CC3CA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30682E151C0A479E00CC3CA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30682E1D1C0A479E00CC3CA5 /* libSerializable.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30682DFF1C0A474C00CC3CA5 = {
+			isa = PBXGroup;
+			children = (
+				30682E0A1C0A474C00CC3CA5 /* Serializable */,
+				30682E191C0A479E00CC3CA5 /* SerializableTests */,
+				30682E091C0A474C00CC3CA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		30682E091C0A474C00CC3CA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30682E081C0A474C00CC3CA5 /* libSerializable.a */,
+				30682E181C0A479E00CC3CA5 /* SerializableTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30682E0A1C0A474C00CC3CA5 /* Serializable */ = {
+			isa = PBXGroup;
+			children = (
+				30682E0B1C0A474C00CC3CA5 /* Serializable.h */,
+				30682E0D1C0A474C00CC3CA5 /* Serializable.m */,
+			);
+			path = Serializable;
+			sourceTree = "<group>";
+		};
+		30682E191C0A479E00CC3CA5 /* SerializableTests */ = {
+			isa = PBXGroup;
+			children = (
+				30682E1A1C0A479E00CC3CA5 /* SerializableTests.m */,
+				30682E1C1C0A479E00CC3CA5 /* Info.plist */,
+			);
+			path = SerializableTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		30682E061C0A474C00CC3CA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30682E0C1C0A474C00CC3CA5 /* Serializable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		30682E071C0A474C00CC3CA5 /* Serializable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30682E111C0A474C00CC3CA5 /* Build configuration list for PBXNativeTarget "Serializable" */;
+			buildPhases = (
+				30682E041C0A474C00CC3CA5 /* Sources */,
+				30682E051C0A474C00CC3CA5 /* Frameworks */,
+				30682E061C0A474C00CC3CA5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Serializable;
+			productName = Serializable;
+			productReference = 30682E081C0A474C00CC3CA5 /* libSerializable.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		30682E171C0A479E00CC3CA5 /* SerializableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30682E201C0A479E00CC3CA5 /* Build configuration list for PBXNativeTarget "SerializableTests" */;
+			buildPhases = (
+				30682E141C0A479E00CC3CA5 /* Sources */,
+				30682E151C0A479E00CC3CA5 /* Frameworks */,
+				30682E161C0A479E00CC3CA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30682E1F1C0A479E00CC3CA5 /* PBXTargetDependency */,
+			);
+			name = SerializableTests;
+			productName = SerializableTests;
+			productReference = 30682E181C0A479E00CC3CA5 /* SerializableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30682E001C0A474C00CC3CA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Roman;
+				TargetAttributes = {
+					30682E071C0A474C00CC3CA5 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					30682E171C0A479E00CC3CA5 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 30682E031C0A474C00CC3CA5 /* Build configuration list for PBXProject "Serializable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 30682DFF1C0A474C00CC3CA5;
+			productRefGroup = 30682E091C0A474C00CC3CA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30682E071C0A474C00CC3CA5 /* Serializable */,
+				30682E171C0A479E00CC3CA5 /* SerializableTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30682E161C0A479E00CC3CA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30682E041C0A474C00CC3CA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30682E0E1C0A474C00CC3CA5 /* Serializable.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30682E141C0A479E00CC3CA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30682E1B1C0A479E00CC3CA5 /* SerializableTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30682E1F1C0A479E00CC3CA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30682E071C0A474C00CC3CA5 /* Serializable */;
+			targetProxy = 30682E1E1C0A479E00CC3CA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		30682E0F1C0A474C00CC3CA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		30682E101C0A474C00CC3CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		30682E121C0A474C00CC3CA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		30682E131C0A474C00CC3CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		30682E211C0A479E00CC3CA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SerializableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = roman.inc.SerializableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		30682E221C0A479E00CC3CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SerializableTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = roman.inc.SerializableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30682E031C0A474C00CC3CA5 /* Build configuration list for PBXProject "Serializable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30682E0F1C0A474C00CC3CA5 /* Debug */,
+				30682E101C0A474C00CC3CA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30682E111C0A474C00CC3CA5 /* Build configuration list for PBXNativeTarget "Serializable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30682E121C0A474C00CC3CA5 /* Debug */,
+				30682E131C0A474C00CC3CA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		30682E201C0A479E00CC3CA5 /* Build configuration list for PBXNativeTarget "SerializableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30682E211C0A479E00CC3CA5 /* Debug */,
+				30682E221C0A479E00CC3CA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30682E001C0A474C00CC3CA5 /* Project object */;
+}
