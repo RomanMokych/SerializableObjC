@@ -71,4 +71,49 @@
     XCTAssertEqual(5, b.aInt);
 }
 
+- (void)test_IsEqual
+{
+    SerializableA* a = [[SerializableA alloc] init];
+    SerializableA* b = [[SerializableA alloc] init];
+    
+    XCTAssert([a isEqual: b]);
+    
+    a.aString = @"test";
+    b.aString = @"test";
+    
+    XCTAssert([a isEqual: b]);
+    
+    a.aInt = 5;
+    b.aInt = 5;
+    
+    XCTAssert([a isEqual: b]);
+}
+
+- (void)test_NotEqual
+{
+    SerializableA* a = [[SerializableA alloc] init];
+    SerializableA* b = [[SerializableA alloc] init];
+    
+    a.aString = @"test";
+    b.aString = @"test1";
+    
+    XCTAssertFalse([a isEqual: b]);
+
+    a = [[SerializableA alloc] init];
+    b = [[SerializableA alloc] init];
+
+    a.aInt = 5;
+    b.aInt = 6;
+    
+    XCTAssertFalse([a isEqual: b]);
+
+    a = [[SerializableA alloc] init];
+    b = [[SerializableA alloc] init];
+    
+    a.aBool = YES;
+    b.aBool = NO;
+    
+    XCTAssertFalse([a isEqual: b]);
+}
+
 @end

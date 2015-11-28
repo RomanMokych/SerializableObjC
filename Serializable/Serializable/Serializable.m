@@ -23,6 +23,34 @@
     return self;
 }
 
+- (BOOL) isEqual: (id)object
+{
+    if (![object isKindOfClass: [self class]])
+    {
+        return NO;
+    }
+    
+    NSArray* propertiesNames = [self propertiesNames];
+    
+    for (NSString* propertyName in propertiesNames)
+    {
+        id propertyValueA = [self valueForKey: propertyName];
+        id propertyValueB = [object valueForKey: propertyName];
+        
+        if (propertyValueA == nil && propertyValueB == nil)
+        {
+            continue;
+        }
+        
+        if (![propertyValueA isEqual: propertyValueB])
+        {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
 #pragma mark - NSCoping
 
 - (instancetype) copyWithZone: (NSZone*)zone
